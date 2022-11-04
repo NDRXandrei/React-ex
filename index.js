@@ -1,5 +1,5 @@
 const hello = <h1>Hello world!</h1>;
-function hello(){
+function helloo(){
   return hello;
 }
-hello();
+helloo();
