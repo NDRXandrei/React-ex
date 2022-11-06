@@ -17,4 +17,4 @@ export class Hello extends React.Component {
 
 const p = "What a beautiful day!";
 
-// export const p = <p>What a beautiful day!</p>;
+
