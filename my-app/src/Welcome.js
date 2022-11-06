@@ -1,14 +1,14 @@
 import React from "react";
-
-
-
 export class Welcome extends React.Component {
-    render() {
-      return (
-        <div>
-          <p>Welcome, {this.props.name}</p>
-        </div>
-      );
-    }
+  static defaultProps = {
+    name: "Simon",
+  };
+  // si è possibile settare un valore di default mediante static defaultProps
+  render() {
+    return (
+      <div>
+        <p>Welcome, {this.props.name}</p>
+      </div>
+    );
   }
-  
+}
