@@ -1,15 +1,20 @@
 import React from "react";
-import { Message } from "./Message";
+
+function Message(props) {
+  return <p>{props.message}</p>;
+}
 
 export class Hello extends React.Component {
   render() {
     return (
       <div>
         <h1>Hello, World!</h1>
-        <Message />
+        <Message message={p} />
       </div>
     );
   }
 }
 
-export const p = <p>What a beautiful day!</p>;
+const p = "What a beautiful day!";
+
+// export const p = <p>What a beautiful day!</p>;
