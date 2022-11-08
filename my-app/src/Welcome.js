@@ -1,9 +1,8 @@
 import React from "react";
 export class Welcome extends React.Component {
   static defaultProps = {
-    name: "Simon",
-  };
-  // si è possibile settare un valore di default mediante static defaultProps
+    name: <strong>Simon</strong>,
+  }; // viene visualizzato e può essere scritto similmente all'html
   render() {
     return (
       <div>
