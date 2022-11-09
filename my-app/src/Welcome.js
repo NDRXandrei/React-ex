@@ -5,7 +5,9 @@ class Age extends React.Component {
     const majorAge = this.props.age;
     if (majorAge > 18 && majorAge < 65) {
       return <p>Your age is {majorAge}</p>;
-    } 
+    } else {
+      return <p>You are very young!</p>;
+    }
   }
 }
 export class Welcome extends React.Component {
@@ -14,14 +16,13 @@ export class Welcome extends React.Component {
   };
   render() {
     const John = this.props.name.props.children;
-    const majorAge = this.props.age;
-    if (John === "John" && majorAge > 18 && majorAge < 65) {
+    if (John === "John") {
       return (
         <div>
           <p>Welcome, {this.props.name}</p>
           <Age age={this.props.age} />
         </div>
       );
-    } 
+    }
   }
 }
