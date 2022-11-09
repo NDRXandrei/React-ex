@@ -3,11 +3,11 @@ import React from "react";
 class Age extends React.Component {
   render() {
     const majorAge = this.props.age;
-    if(majorAge > 18){
+    if(majorAge !== undefined){
       return <p>Your age is {majorAge}</p>;
     }
     else {
-      return <p>Too young!</p>
+      return <p>Prop not present</p>
     }
   }
 }
