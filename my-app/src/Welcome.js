@@ -6,9 +6,6 @@ class Age extends React.Component {
     if(majorAge !== undefined){
       return <p>Your age is {majorAge}</p>;
     }
-    else {
-      return <p>Prop not present</p>
-    }
   }
 }
 export class Welcome extends React.Component {
