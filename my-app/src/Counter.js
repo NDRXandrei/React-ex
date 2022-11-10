@@ -5,7 +5,7 @@ export class Counter extends React.Component {
       <div>
         <CounterDisplay
           count={5}
-          other={{amount: this.props.amount, interval: this.props.interval}}
+          other={{ amount: this.props.amount, interval: this.props.interval }}
         />
       </div>
     );
@@ -13,10 +13,13 @@ export class Counter extends React.Component {
 }
 
 class CounterDisplay extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { count: this.props.count };
-  }
+  state = { count: this.props.count };
+  //   constructor(props) {
+  //     super(props);
+  //     this.state = { count: this.props.count };
+  //   }
+
+  //non è necessario
 
   componentDidMount() {
     this.timer = setInterval(() => this.tick(), this.props.other.interval);
