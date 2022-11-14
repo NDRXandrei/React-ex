@@ -1,4 +1,5 @@
 import React from "react";
+import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
 import { CounterClick } from "./CounterClick";
 import { Hello } from "./Hello";
@@ -11,7 +12,8 @@ export class App extends React.Component {
         {/* <Hello />
         <Welcome age={17}/> */}
         {/* <Counter count={2} interval= {200} amount= {5}/> */}
-        <CounterClick />
+        {/* <CounterClick /> */}
+        <ClickTracker />
       </div>
     );
   }
