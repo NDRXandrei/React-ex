@@ -5,6 +5,7 @@ import { CounterClick } from "./CounterClick";
 import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
 import {InteractiveWelcome} from "./InteractiveWelcome"
+import { Login } from "./Login";
 
 export class App extends React.Component {
   render() {
@@ -15,7 +16,8 @@ export class App extends React.Component {
         {/* <Counter count={2} interval= {200} amount= {5}/> */}
         {/* <CounterClick /> */}
         {/* <ClickTracker /> */}
-        <InteractiveWelcome />
+        {/* <InteractiveWelcome /> */}
+        <Login />
       </div>
     );
   }
