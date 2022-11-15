@@ -11,18 +11,12 @@ class Age extends React.Component {
   }
 }
 export class Welcome extends React.Component {
-  static defaultProps = {
-    name: <strong>John</strong>,
-  };
   render() {
-    const John = this.props.name.props.children;
-    if (John === "John") {
-      return (
-        <div>
-          <p>Welcome, {this.props.name}</p>
-          <Age age={this.props.age} />
-        </div>
-      );
-    }
+    return (
+      <div>
+        <p>Welcome, {this.props.name}</p>
+        {/* <Age age={this.props.age} /> */}
+      </div>
+    );
   }
 }

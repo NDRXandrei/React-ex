@@ -4,6 +4,7 @@ import { Counter } from "./Counter";
 import { CounterClick } from "./CounterClick";
 import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
+import {InteractiveWelcome} from "./InteractiveWelcome"
 
 export class App extends React.Component {
   render() {
@@ -13,7 +14,8 @@ export class App extends React.Component {
         <Welcome age={17}/> */}
         {/* <Counter count={2} interval= {200} amount= {5}/> */}
         {/* <CounterClick /> */}
-        <ClickTracker />
+        {/* <ClickTracker /> */}
+        <InteractiveWelcome />
       </div>
     );
   }
