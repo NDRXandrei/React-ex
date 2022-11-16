@@ -1,5 +1,68 @@
 import React from "react";
 
+class UncontrolledLogin extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { username: "", password: "", disabled: true };
+    this.input = React.createRef();
+  }
+
+  handleInputChange = (e) => {
+    const target = e.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  onLogin = (e) => {
+    alert("E' stato inserito un nome: " + this.input.current.value);
+  };
+
+  clear = (e) => {
+    this.setState({ username: "", password: "" });
+  };
+
+  render() {
+    return (
+      <div>
+        <input
+          type="text"
+          name="username"
+          placeholder="user"
+          ref={this.input}
+          onChange={this.handleInputChange}
+        ></input>
+        <input
+          type="password"
+          name="password"
+          placeholder="pass"
+          ref={this.input}
+          onChange={this.handleInputChange}
+        ></input>
+        <input
+          type="checkbox"
+          ref={this.input}
+          onChange={this.handleInputChange}
+        ></input>
+        remember me
+        <button
+          disabled={
+            this.state.username !== "" && this.state.password !== ""
+              ? false
+              : true
+          }
+          onClick={this.onLogin}
+        >
+          login
+        </button>
+        <button onClick={this.clear}>reset</button>
+      </div>
+    );
+  }
+}
 export class Login extends React.Component {
   state = { username: "", password: "", disabled: true };
 
@@ -23,7 +86,7 @@ export class Login extends React.Component {
   render() {
     return (
       <div>
-        <input
+        {/* <input
           type="text"
           name="username"
           placeholder="user"
@@ -49,7 +112,9 @@ export class Login extends React.Component {
         >
           login
         </button>
-        <button onClick={this.clear}>reset</button>
+        <button onClick={this.clear}>reset</button> */}
+
+        <UncontrolledLogin />
       </div>
     );
   }
