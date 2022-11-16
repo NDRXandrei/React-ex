@@ -15,7 +15,7 @@ export class InteractiveWelcome extends React.Component {
     return (
       <div>
         <Welcome name={this.state.value} />
-        <input onChange={this.change}></input>
+        <input onChange={this.change} value={this.state.value}></input>
       </div>
     );
   }
