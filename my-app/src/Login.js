@@ -16,6 +16,10 @@ export class Login extends React.Component {
     alert("E' stato inserito un nome: " + this.state.username);
   };
 
+  clear = (e) => {
+    this.setState({ username: "", password: "" });
+  };
+
   render() {
     return (
       <div>
@@ -45,6 +49,7 @@ export class Login extends React.Component {
         >
           login
         </button>
+        <button onClick={this.clear}>reset</button>
       </div>
     );
   }
