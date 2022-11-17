@@ -11,7 +11,7 @@ export class TodoList extends React.Component {
     const inputs = this.state.inputs;
     const arr = this.state.item;
     arr.push(inputs);
-    this.setState({ item: arr });
+    this.setState({ item: arr , inputs: ""});
   };
 
   render() {
@@ -22,7 +22,7 @@ export class TodoList extends React.Component {
 
     return (
       <div>
-        <input type="text" onChange={this.handleInput}></input>
+        <input type="text" onChange={this.handleInput} value={this.state.inputs}></input>
         <button onClick={this.addItem}>Aggiungi</button>
         <ul>{lista}</ul>
       </div>
