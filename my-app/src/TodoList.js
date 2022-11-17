@@ -16,9 +16,8 @@ export class TodoList extends React.Component {
 
   reset = (e) => {
     const arr = this.state.item;
-    for (let i = 1; i <= arr.length; i++) {
-      arr.pop();
-      arr.shift();
+    for (let i = 0; i <= arr.length; i++) {
+      arr.splice(i);
       this.setState({ item: arr });
     }
   };
