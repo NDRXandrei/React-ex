@@ -11,7 +11,16 @@ export class TodoList extends React.Component {
     const inputs = this.state.inputs;
     const arr = this.state.item;
     arr.push(inputs);
-    this.setState({ item: arr , inputs: ""});
+    this.setState({ item: arr, inputs: "" });
+  };
+
+  reset = (e) => {
+    const arr = this.state.item;
+    for (let i = 1; i <= arr.length; i++) {
+      arr.pop();
+      arr.shift();
+      this.setState({ item: arr });
+    }
   };
 
   render() {
@@ -22,8 +31,13 @@ export class TodoList extends React.Component {
 
     return (
       <div>
-        <input type="text" onChange={this.handleInput} value={this.state.inputs}></input>
+        <input
+          type="text"
+          onChange={this.handleInput}
+          value={this.state.inputs}
+        ></input>
         <button onClick={this.addItem}>Aggiungi</button>
+        <button onClick={this.reset}>Reset</button>
         <ul>{lista}</ul>
       </div>
     );
