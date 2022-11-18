@@ -1,5 +1,4 @@
 import React from "react";
-
 export class TodoList extends React.Component {
   state = { item: [], inputs: "" };
 
@@ -16,9 +15,22 @@ export class TodoList extends React.Component {
 
   reset = (e) => {
     const arr = this.state.item;
-    for (let i = 1; i <= arr.length; i++) {
-      arr.pop();
+    for (let i = 0; i <= arr.length; i++) {
+      arr.splice(i);
+      this.setState({ item: arr });
+    }
+  };
+
+  remove = (e) => {
+    const arr = this.state.item;
+    const value = e.target.value;
+    const id = arr.indexOf(arr.find((id) => id === value));
+    console.log(id);
+    if (id === 0) {
       arr.shift();
+      this.setState({ item: arr });
+    } else {
+      arr.splice(id, id);
       this.setState({ item: arr });
     }
   };
@@ -26,7 +38,12 @@ export class TodoList extends React.Component {
   render() {
     const items = this.state.item;
     const lista = items.map((element) => (
-      <li key={element.toString()}>{element}</li>
+      <li key={element.toString()}>
+        {element}
+        <button onClick={this.remove} value={element}>
+          Remove
+        </button>
+      </li>
     ));
 
     return (
