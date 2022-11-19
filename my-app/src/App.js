@@ -8,6 +8,10 @@ import {InteractiveWelcome} from "./InteractiveWelcome"
 import { Login } from "./Login";
 
 export class App extends React.Component {
+  onLogin = (e) => {
+    alert("Fatto!");
+  };
+
   render() {
     return (
       <div>
@@ -17,7 +21,7 @@ export class App extends React.Component {
         {/* <CounterClick /> */}
         {/* <ClickTracker /> */}
         {/* <InteractiveWelcome /> */}
-        <Login />
+        <Login log={this.onLogin}/>
       </div>
     );
   }

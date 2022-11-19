@@ -13,7 +13,7 @@ export class Login extends React.Component {
   };
 
   onLogin = (e) => {
-    alert("E' stato inserito un nome: " + this.state.username);
+    this.props.log()
   };
 
   render() {
