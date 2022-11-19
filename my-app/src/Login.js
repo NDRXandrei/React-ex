@@ -42,6 +42,7 @@ class UncontrolledLogin extends React.Component {
           placeholder="pass"
           ref={this.input}
           onChange={this.handleInputChange}
+          style={this.state.password.length < 8 ? {backgroundColor: "red"} : {backgroundColor: "green"}}
         ></input>
         <input
           type="checkbox"
