@@ -12,14 +12,14 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        {/* <Hello />
-        <Welcome age={17}/> */}
+        <Hello />
+        <Welcome age={17}/>
         {/* <Counter count={2} interval= {200} amount= {5}/> */}
         {/* <CounterClick /> */}
         {/* <ClickTracker /> */}
         {/* <InteractiveWelcome /> */}
         {/* <Login /> */}
-        <TodoList />
+        {/* <TodoList /> */}
       </div>
     );
   }
