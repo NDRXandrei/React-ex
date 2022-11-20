@@ -21,7 +21,7 @@ export class App extends React.Component {
         {/* <InteractiveWelcome /> */}
         {/* <Login /> */}
         {/* <TodoList /> */}
-        <Container />
+        <Container title="Hello World"/>
       </div>
     );
   }
