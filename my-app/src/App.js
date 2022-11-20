@@ -7,6 +7,7 @@ import { Welcome } from "./Welcome";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { TodoList } from "./TodoList";
+import { Container } from "./Container";
 
 export class App extends React.Component {
   render() {
@@ -18,8 +19,9 @@ export class App extends React.Component {
         {/* <CounterClick /> */}
         {/* <ClickTracker /> */}
         {/* <InteractiveWelcome /> */}
-        <Login />
+        {/* <Login /> */}
         {/* <TodoList /> */}
+        <Container />
       </div>
     );
   }
