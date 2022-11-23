@@ -8,7 +8,7 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { TodoList } from "./TodoList";
 import { Container } from "./Container";
-
+import { DisplayLanguage, LanguageContext } from "./LanguageContext";
 export class App extends React.Component {
   render() {
     return (
@@ -20,12 +20,15 @@ export class App extends React.Component {
         {/* <ClickTracker /> */}
         {/* <InteractiveWelcome /> */}
         {/* <Login /> */}
-        <TodoList
+        {/* <TodoList
           render={(item) => {
             return <ul>{item}</ul>;
           }}
-        ></TodoList>
+        ></TodoList> */}
         {/* <Container title="Hello World"/> */}
+        <LanguageContext.Provider value="ita">
+          <DisplayLanguage/>
+        </LanguageContext.Provider>
       </div>
     );
   }
