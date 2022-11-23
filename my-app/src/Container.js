@@ -1,5 +1,4 @@
 import React from "react";
-import './input.css'
 
 export class Container extends React.Component{
     render(){

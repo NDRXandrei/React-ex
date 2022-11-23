@@ -52,10 +52,13 @@ export class TodoList extends React.Component {
           type="text"
           onChange={this.handleInput}
           value={this.state.inputs}
+          className="space-x-5"
         ></input>
-        <button onClick={this.addItem}>Aggiungi</button>
-        <button onClick={this.reset}>Reset</button>
-        <ul>{lista}</ul>
+        <button onClick={this.addItem}>
+          Aggiungi
+        </button>
+        <button onClick={this.reset} className="mr-5">Reset</button>
+        <ul>{this.props.render(lista)}</ul>
       </div>
     );
   }

@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css"
 class Age extends React.Component {
   render() {
     const majorAge = this.props.age;

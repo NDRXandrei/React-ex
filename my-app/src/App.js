@@ -20,8 +20,12 @@ export class App extends React.Component {
         {/* <ClickTracker /> */}
         {/* <InteractiveWelcome /> */}
         {/* <Login /> */}
-        {/* <TodoList /> */}
-        <Container title="Hello World"/>
+        <TodoList
+          render={(item) => {
+            return <ul>{item}</ul>;
+          }}
+        ></TodoList>
+        {/* <Container title="Hello World"/> */}
       </div>
     );
   }
