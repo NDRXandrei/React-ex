@@ -30,7 +30,7 @@ export class App extends React.Component {
         {/* <LanguageContext.Provider value="ita">
           <DisplayLanguage/>
         </LanguageContext.Provider> */}
-        <Sum num={[1,2,3,4,5]}/>
+        <Sum />
       </div>
     );
   }
