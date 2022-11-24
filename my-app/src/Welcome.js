@@ -9,13 +9,22 @@ class Age extends React.Component {
     }
   }
 }
-export class Welcome extends React.Component {
-  render() {
-    return (
-      <div>
-        <p className="welcome">Welcome, {this.props.name}</p>
-        {/* <Age age={this.props.age} /> */}
-      </div>
-    );
-  }
+// export class Welcome extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//         <p className="welcome">Welcome, {this.props.name}</p>
+//         {/* <Age age={this.props.age} /> */}
+//       </div>
+//     );
+//   }
+// }
+
+export function Welcome(props) {
+  return (
+    <div>
+      <p className="welcome">Welcome</p>
+      {/* <Age age={this.props.age} /> */}
+    </div>
+  );
 }

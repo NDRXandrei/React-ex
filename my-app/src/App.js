@@ -3,18 +3,19 @@ import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
 import { CounterClick } from "./CounterClick";
 import { Hello } from "./Hello";
-import { Welcome } from "./Welcome";
+// import { Welcome } from "./Welcome";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { TodoList } from "./TodoList";
 import { Container } from "./Container";
 import { DisplayLanguage, LanguageContext } from "./LanguageContext";
+import { Welcome } from "./Welcome";
 export class App extends React.Component {
   render() {
     return (
       <div>
-        {/* <Hello />
-        <Welcome age={17}/> */}
+        {/* <Hello /> */}
+        <Welcome age={17}/>
         {/* <Counter count={2} interval= {200} amount= {5}/> */}
         {/* <CounterClick /> */}
         {/* <ClickTracker /> */}
@@ -26,9 +27,9 @@ export class App extends React.Component {
           }}
         ></TodoList> */}
         {/* <Container title="Hello World"/> */}
-        <LanguageContext.Provider value="ita">
+        {/* <LanguageContext.Provider value="ita">
           <DisplayLanguage/>
-        </LanguageContext.Provider>
+        </LanguageContext.Provider> */}
       </div>
     );
   }
