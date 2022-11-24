@@ -3,19 +3,19 @@ import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
 import { CounterClick } from "./CounterClick";
 import { Hello } from "./Hello";
-// import { Welcome } from "./Welcome";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { TodoList } from "./TodoList";
 import { Container } from "./Container";
 import { DisplayLanguage, LanguageContext } from "./LanguageContext";
 import { Welcome } from "./Welcome";
+import { Sum } from "./Sum";
 export class App extends React.Component {
   render() {
     return (
       <div>
         {/* <Hello /> */}
-        <Welcome age={17}/>
+        {/* <Welcome age={17}/> */}
         {/* <Counter count={2} interval= {200} amount= {5}/> */}
         {/* <CounterClick /> */}
         {/* <ClickTracker /> */}
@@ -30,6 +30,7 @@ export class App extends React.Component {
         {/* <LanguageContext.Provider value="ita">
           <DisplayLanguage/>
         </LanguageContext.Provider> */}
+        <Sum num={[1,2,3,4,5]}/>
       </div>
     );
   }

@@ -1,7 +1,6 @@
 import React from "react";
 
 export const LanguageContext = React.createContext("eng");
-console.log(LanguageContext._currentValue);
 
 export class DisplayLanguage extends React.Component {
   state = { language: "" };
