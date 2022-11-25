@@ -17,7 +17,7 @@ export class App extends React.Component {
         {/* <Hello /> */}
         {/* <Welcome age={17}/> */}
         {/* <Counter count={2} interval= {200} amount= {5}/> */}
-        {/* <CounterClick /> */}
+        <CounterClick />
         {/* <ClickTracker /> */}
         {/* <InteractiveWelcome /> */}
         {/* <Login /> */}
@@ -30,7 +30,7 @@ export class App extends React.Component {
         {/* <LanguageContext.Provider value="ita">
           <DisplayLanguage/>
         </LanguageContext.Provider> */}
-        <Sum />
+        {/* <Sum /> */}
       </div>
     );
   }
