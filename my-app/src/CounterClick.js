@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 // export class CounterClick extends React.Component {
@@ -21,8 +21,14 @@ import { useState } from "react";
 
 export function CounterClick(props) {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    props.effect(count)
+  });
+
   return (
     <>
+      <p>You clicked {count} times</p>
       <h1>{count}</h1>
       <button onClick={() => setCount(count + 1)}>Clicca</button>
     </>
