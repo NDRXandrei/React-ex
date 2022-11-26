@@ -12,19 +12,19 @@ import { Welcome } from "./Welcome";
 import { Sum } from "./Sum";
 
 export class App extends React.Component {
-  
-  onCounterChange(e) {
-    document.title = `You clicked ${e} times`;
-    return `You clicked ${e} times`
-  }
+
+  // onCounterChange(e) {
+  //   document.title = `You clicked ${e} times`;
+  //   return `You clicked ${e} times`
+  // }
 
   render() {
     return (
       <div>
         {/* <Hello /> */}
         {/* <Welcome age={17}/> */}
-        {/* <Counter count={2} interval= {200} amount= {5}/> */}
-        <CounterClick effect={this.onCounterChange} />
+        <Counter count={5} interval= {1000} amount= {5}/>
+        {/* <CounterClick effect={this.onCounterChange} /> */}
         {/* <ClickTracker /> */}
         {/* <InteractiveWelcome /> */}
         {/* <Login /> */}
