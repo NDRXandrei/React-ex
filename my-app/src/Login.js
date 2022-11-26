@@ -64,28 +64,31 @@ import { useEffect } from "react";
 // }
 
 export function Login(props) {
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [disabled, setDisabled] = useState(true);
-  useEffect(() => {
-    if (data.username !== "" && data.password !== "") {
-      setData({ ...data, disabled: false });
-    }
-  });
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [disabled, setDisabled] = useState(true);
 
-  const [data, setData] = useState({
-    username: "",
-    password: "",
-    disabled: true,
+  useEffect(() => {
+    if (username !== "" && password !== "") {
+      setDisabled(false);
+    }
   });
 
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
 
-    setData({ ...data, [name]: value });
+    switch (name) {
+      case "username":
+        setUsername(value);
+        break;
+      case "password":
+        setPassword(value);
+    }
+  };
 
-    console.log();
+  const onLogin = (e) => {
+    props.log();
   };
 
   return (
@@ -93,7 +96,9 @@ export function Login(props) {
       <form onChange={handleChange}>
         <input type="text" name="username"></input>
         <input type="password" name="password"></input>
-        <button disabled={data.disabled}>Login</button>
+        <button disabled={disabled} onClick={onLogin}>
+          Login
+        </button>
       </form>
     </>
   );
