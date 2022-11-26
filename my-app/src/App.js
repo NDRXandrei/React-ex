@@ -10,6 +10,7 @@ import { Container } from "./Container";
 import { DisplayLanguage, LanguageContext } from "./LanguageContext";
 import { Welcome } from "./Welcome";
 import { Sum } from "./Sum";
+import { GithubUser } from "./GithubUser";
 
 export class App extends React.Component {
 
@@ -23,7 +24,7 @@ export class App extends React.Component {
       <div>
         {/* <Hello /> */}
         {/* <Welcome age={17}/> */}
-        <Counter count={5} interval= {1000} amount= {5}/>
+        {/* <Counter count={5} interval= {1000} amount= {5}/> */}
         {/* <CounterClick effect={this.onCounterChange} /> */}
         {/* <ClickTracker /> */}
         {/* <InteractiveWelcome /> */}
@@ -38,6 +39,7 @@ export class App extends React.Component {
           <DisplayLanguage/>
         </LanguageContext.Provider> */}
         {/* <Sum /> */}
+        <GithubUser />
       </div>
     );
   }
