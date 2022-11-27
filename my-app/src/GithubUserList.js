@@ -27,9 +27,7 @@ export function GithubUserList() {
   const list = username.map((user) => {
     if (user !== null && user !== undefined) {
       return (
-        <GithubUser user={user} key={user.toString()}>
-          {user}
-        </GithubUser>
+        <GithubUser user={user} key={user.toString()}/>
       );
     }
   });
