@@ -8,7 +8,7 @@ export function GithubUser(props) {
     fetch(`https://api.github.com/users/${user}`)
       .then((response) => response.json())
       .then((data) => {
-        setUsername(data.login);
+        setUsername(data.name);
       });
   }, []);
 
