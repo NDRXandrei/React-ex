@@ -12,6 +12,7 @@ import { Welcome } from "./Welcome";
 import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
+import { CustomCounter } from "./CustomCounter";
 
 export class App extends React.Component {
 
@@ -41,7 +42,8 @@ export class App extends React.Component {
         </LanguageContext.Provider> */}
         {/* <Sum /> */}
         {/* <GithubUser /> */}
-        <GithubUserList />
+        {/* <GithubUserList /> */}
+        <CustomCounter />
       </div>
     );
   }
