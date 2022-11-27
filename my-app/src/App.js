@@ -11,6 +11,7 @@ import { DisplayLanguage, LanguageContext } from "./LanguageContext";
 import { Welcome } from "./Welcome";
 import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 
 export class App extends React.Component {
 
@@ -39,7 +40,8 @@ export class App extends React.Component {
           <DisplayLanguage/>
         </LanguageContext.Provider> */}
         {/* <Sum /> */}
-        <GithubUser />
+        {/* <GithubUser /> */}
+        <GithubUserList />
       </div>
     );
   }
