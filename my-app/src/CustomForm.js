@@ -16,7 +16,7 @@ export function CustomForm(props) {
       username: "",
       password: "",
     },
-    // (data) => console.dir(data)
+    
   );
 
 
