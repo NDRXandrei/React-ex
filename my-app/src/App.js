@@ -13,6 +13,7 @@ import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { CustomCounter } from "./CustomCounter";
+import { CustomForm } from "./CustomForm";
 
 export class App extends React.Component {
 
@@ -43,7 +44,8 @@ export class App extends React.Component {
         {/* <Sum /> */}
         {/* <GithubUser /> */}
         {/* <GithubUserList /> */}
-        <CustomCounter />
+        {/* <CustomCounter /> */}
+        <CustomForm />
       </div>
     );
   }

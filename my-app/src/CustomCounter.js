@@ -25,7 +25,6 @@ export function CustomCounter(props) {
 
   const handleOperation = (e) => {
     setOperation(e.target.name);
-    console.log(operation);
     setKey(key + 1);
   };
 
