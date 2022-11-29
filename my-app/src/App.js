@@ -14,6 +14,7 @@ import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { CustomCounter } from "./CustomCounter";
 import { CustomForm } from "./CustomForm";
+import { CardDetails } from "./CardDetails";
 
 export class App extends React.Component {
 
@@ -43,9 +44,10 @@ export class App extends React.Component {
         </LanguageContext.Provider> */}
         {/* <Sum /> */}
         {/* <GithubUser /> */}
-        <GithubUserList />
+        {/* <GithubUserList /> */}
         {/* <CustomCounter /> */}
         {/* <CustomForm /> */}
+        <CardDetails car={{model: 'Panda', year: 1990, color: 'green'}}/>
       </div>
     );
   }
