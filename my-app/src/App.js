@@ -39,13 +39,13 @@ export class App extends React.Component {
           }}
         ></TodoList> */}
         {/* <Container title="Hello World"/> */}
-        <LanguageContext.Provider value="ita">
+        {/* <LanguageContext.Provider value="eng">
           <DisplayLanguage/>
-        </LanguageContext.Provider>
+        </LanguageContext.Provider> */}
         {/* <Sum /> */}
         {/* <GithubUser /> */}
         {/* <GithubUserList /> */}
-        {/* <CustomCounter /> */}
+        <CustomCounter />
         {/* <CustomForm /> */}
         {/* <CardDetails car={{model: 'Panda', year: 1990, color: 'green'}}/> */}
       </div>

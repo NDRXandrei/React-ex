@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 const useCounter = (operation, key) => {
   const [count, setCount] = useState(0);
@@ -23,10 +23,10 @@ export function CustomCounter(props) {
   const [operation, setOperation] = useState("");
   const [key, setKey] = useState(0);
 
-  const handleOperation = (e) => {
+  const handleOperation = useCallback((e) => {
     setOperation(e.target.name);
     setKey(key + 1);
-  };
+  });
 
   const count = useCounter(operation, key);
 

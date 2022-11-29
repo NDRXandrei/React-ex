@@ -32,10 +32,10 @@ export function DisplayLanguage(props) {
   return (
     <>
       <select onChange={handleLanguage}>
-        <option value="ita">Italiano</option>
-        <option value="eng">English</option>
+        <option value={lingua._currentValue}>Italiano</option>
+        <option value={lingua._currentValue}>English</option>
       </select>
-      <h1>{lingua}</h1>
+      <h1>{language}</h1>
     </>
   );
 }
