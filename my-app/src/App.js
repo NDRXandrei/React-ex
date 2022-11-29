@@ -15,9 +15,9 @@ import { GithubUserList } from "./GithubUserList";
 import { CustomCounter } from "./CustomCounter";
 import { CustomForm } from "./CustomForm";
 import { CardDetails } from "./CardDetails";
+import { FilteredList } from "./FilteredList";
 
 export class App extends React.Component {
-
   // onCounterChange(e) {
   //   document.title = `You clicked ${e} times`;
   //   return `You clicked ${e} times`
@@ -45,9 +45,15 @@ export class App extends React.Component {
         {/* <Sum /> */}
         {/* <GithubUser /> */}
         {/* <GithubUserList /> */}
-        <CustomCounter />
+        {/* <CustomCounter /> */}
         {/* <CustomForm /> */}
         {/* <CardDetails car={{model: 'Panda', year: 1990, color: 'green'}}/> */}
+        <FilteredList
+          persons={[
+            { id: 0, name: "John", age: "17" },
+            { id: 1, name: "Simon", age: "19" },
+          ]}
+        />
       </div>
     );
   }
