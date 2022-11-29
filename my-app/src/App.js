@@ -99,7 +99,11 @@ export function App(props) {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Welcome name="John" />}></Route>
+        <Route path="/" element={<Welcome name="John" />} />
+        <Route
+          path="counter"
+          element={<Counter count={5} interval={1000} amount={5} />}
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 class Age extends React.Component {
   render() {
     const majorAge = this.props.age;
@@ -27,6 +28,7 @@ export function Welcome(props) {
         Welcome <strong>{props.name}</strong>
       </p>
       {/* <Age age={this.props.age} /> */}
+      <h3><Link to="/counter">Counter</Link></h3>
     </div>
   );
 }
