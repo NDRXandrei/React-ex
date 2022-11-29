@@ -1,22 +1,41 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 
 export const LanguageContext = React.createContext("eng");
 
-export class DisplayLanguage extends React.Component {
-  state = { language: "" };
-  handleLanguage = (e) => {
-    this.setState({ language: e.target.value });
+// export class DisplayLanguage extends React.Component {
+//   state = { language: "" };
+//   handleLanguage = (e) => {
+//     this.setState({ language: e.target.value });
+//   };
+//   render() {
+//     console.log(this.state.language);
+//     return (
+//       <>
+//         <select onChange={this.handleLanguage}>
+//           <option value={this.context._currentValue}>Italiano</option>
+//           <option value={this.context._currentValue}>English</option>
+//         </select>
+//         <h1>{this.state.language}</h1>
+//       </>
+//     );
+//   }
+// }
+
+export function DisplayLanguage(props) {
+  const lingua = useContext(LanguageContext);
+  const [language, setLanguage] = useState("");
+
+  const handleLanguage = (e) => {
+    setLanguage(e.target.value);
   };
-  render() {
-    console.log(this.state.language);
-    return (
-      <>
-        <select onChange={this.handleLanguage}>
-          <option value={this.context._currentValue}>Italiano</option>
-          <option value={this.context._currentValue}>English</option>
-        </select>
-        <h1>{this.state.language}</h1>
-      </>
-    );
-  }
+
+  return (
+    <>
+      <select onChange={handleLanguage}>
+        <option value="ita">Italiano</option>
+        <option value="eng">English</option>
+      </select>
+      <h1>{lingua}</h1>
+    </>
+  );
 }
