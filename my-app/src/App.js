@@ -17,44 +17,90 @@ import { CustomForm } from "./CustomForm";
 import { CardDetails } from "./CardDetails";
 import { FilteredList } from "./FilteredList";
 
-export class App extends React.Component {
-  // onCounterChange(e) {
-  //   document.title = `You clicked ${e} times`;
-  //   return `You clicked ${e} times`
-  // }
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-  render() {
-    return (
-      <div>
-        {/* <Hello /> */}
-        {/* <Welcome age={17}/> */}
-        {/* <Counter count={5} interval= {1000} amount= {5}/> */}
-        {/* <CounterClick effect={this.onCounterChange} /> */}
-        {/* <ClickTracker /> */}
-        {/* <InteractiveWelcome /> */}
-        {/* <Login /> */}
-        {/* <TodoList
+// export class App extends React.Component {
+// onCounterChange(e) {
+//   document.title = `You clicked ${e} times`;
+//   return `You clicked ${e} times`
+// }
+
+// render() {
+//   return (
+//     <div>
+{
+  /* <Hello /> */
+}
+{
+  /* <Welcome age={17}/> */
+}
+{
+  /* <Counter count={5} interval= {1000} amount= {5}/> */
+}
+{
+  /* <CounterClick effect={this.onCounterChange} /> */
+}
+{
+  /* <ClickTracker /> */
+}
+{
+  /* <InteractiveWelcome /> */
+}
+{
+  /* <Login /> */
+}
+{
+  /* <TodoList
           render={(item) => {
             return <ul>{item}</ul>;
           }}
-        ></TodoList> */}
-        {/* <Container title="Hello World"/> */}
-        {/* <LanguageContext.Provider value="eng">
+        ></TodoList> */
+}
+{
+  /* <Container title="Hello World"/> */
+}
+{
+  /* <LanguageContext.Provider value="eng">
           <DisplayLanguage/>
-        </LanguageContext.Provider> */}
-        {/* <Sum /> */}
-        {/* <GithubUser /> */}
-        {/* <GithubUserList /> */}
-        {/* <CustomCounter /> */}
-        {/* <CustomForm /> */}
-        {/* <CardDetails car={{model: 'Panda', year: 1990, color: 'green'}}/> */}
-        <FilteredList
+        </LanguageContext.Provider> */
+}
+{
+  /* <Sum /> */
+}
+{
+  /* <GithubUser /> */
+}
+{
+  /* <GithubUserList /> */
+}
+{
+  /* <CustomCounter /> */
+}
+{
+  /* <CustomForm /> */
+}
+{
+  /* <CardDetails car={{model: 'Panda', year: 1990, color: 'green'}}/> */
+}
+{
+  /* <FilteredList
           persons={[
             { id: 0, name: "John", age: "17" },
             { id: 1, name: "Simon", age: "19" },
           ]}
-        />
-      </div>
-    );
-  }
+        /> */
+}
+//       </div>
+//     );
+//   }
+// }
+
+export function App(props) {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Welcome name="John" />}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }

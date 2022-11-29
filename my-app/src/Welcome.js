@@ -23,7 +23,9 @@ class Age extends React.Component {
 export function Welcome(props) {
   return (
     <div>
-      <p className="welcome">Welcome</p>
+      <p className="welcome">
+        Welcome <strong>{props.name}</strong>
+      </p>
       {/* <Age age={this.props.age} /> */}
     </div>
   );
