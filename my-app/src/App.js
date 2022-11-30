@@ -101,7 +101,8 @@ export function App(props) {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/welcome" element={<Welcome name="John" />} />
+        <Route path="/" />
+          <Route path="/notfounwelcome" element={<Welcome name="John" />} />
           <Route
             path="/counter"
             element={<Counter count={5} interval={1000} amount={5} />}
