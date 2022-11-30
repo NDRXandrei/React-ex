@@ -17,7 +17,7 @@ import { CustomForm } from "./CustomForm";
 import { CardDetails } from "./CardDetails";
 import { FilteredList } from "./FilteredList";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { ShowGithubUser } from "./ShowGithubUser";
 
 // export class App extends React.Component {
@@ -97,18 +97,28 @@ import { ShowGithubUser } from "./ShowGithubUser";
 // }
 
 export function App(props) {
-  const [user, setUser] = useState('NDRXandrei');
-
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Welcome name="John" />} />
-        <Route
-          path="counter"
-          element={<Counter count={5} interval={1000} amount={5} />}
-        />
-        <Route path='users/:username' element={<ShowGithubUser />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/welcome" element={<Welcome name="John" />} />
+          <Route
+            path="/counter"
+            element={<Counter count={5} interval={1000} amount={5} />}
+          />
+          <Route path="/users/:username" element={<ShowGithubUser />} />
+        </Routes>
+        <h3>
+          <Link to="welcome">Home</Link>
+        </h3>
+
+        <h3>
+          <Link to="counter">Counter</Link>
+        </h3>
+        <h3>
+          <Link to="users/:username">User</Link>
+        </h3>
+      </BrowserRouter>
+    </>
   );
 }

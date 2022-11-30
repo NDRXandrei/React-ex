@@ -29,12 +29,12 @@ export function Welcome(props) {
         Welcome <strong>{props.name}</strong>
       </p>
       {/* <Age age={this.props.age} /> */}
-      <h3>
-        <Link to="/counter">Counter</Link>
-      </h3>
-      <h3>
-        <Link to='/users/:username'>User</Link>
-      </h3>
+      {/* <h3>
+        <Link to="counter">Counter</Link>
+      </h3> */}
+      {/* <h3>
+        <Link to='users/:username'>User</Link>
+      </h3> */}
     </div>
   );
 }
