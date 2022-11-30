@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
 import { CounterClick } from "./CounterClick";
@@ -18,6 +18,7 @@ import { CardDetails } from "./CardDetails";
 import { FilteredList } from "./FilteredList";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ShowGithubUser } from "./ShowGithubUser";
 
 // export class App extends React.Component {
 // onCounterChange(e) {
@@ -96,6 +97,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // }
 
 export function App(props) {
+  const [user, setUser] = useState('NDRXandrei');
+
   return (
     <BrowserRouter>
       <Routes>
@@ -104,6 +107,7 @@ export function App(props) {
           path="counter"
           element={<Counter count={5} interval={1000} amount={5} />}
         />
+        <Route path='users/:username' element={<ShowGithubUser />} />
       </Routes>
     </BrowserRouter>
   );

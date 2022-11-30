@@ -42,6 +42,7 @@ export function GithubUser(props) {
   const fetch = useGithubUser();
 
   const user = fetch(props.user);
+
   console.log(user);
   return (
     <div>
