@@ -5,5 +5,5 @@ import { GithubUser } from "./GithubUser";
 export function ShowGithubUser(props) {
   const { user = 'NDRXandrei' } = useParams();
 
-  return <GithubUser user={props.user} />;
+  return <GithubUser user={user} />;
 }
