@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GithubUser } from "./GithubUser";
+import { ShowGithubUser } from "./ShowGithubUser";
 
 export function GithubUserList() {
   const [user, setUser] = useState("");
@@ -27,7 +28,7 @@ export function GithubUserList() {
   const list = username.map((user) => {
     if (user !== null && user !== undefined) {
       return (
-        <GithubUser user={user} key={user.toString()}/>
+        <ShowGithubUser user={user} key={user.toString()}/>
       );
     }
   });

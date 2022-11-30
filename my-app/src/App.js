@@ -106,7 +106,10 @@ export function App(props) {
             path="/counter"
             element={<Counter count={5} interval={1000} amount={5} />}
           />
-          <Route path="/users/:username" element={<ShowGithubUser />} />
+          <Route path="/users" element={<GithubUserList />}>
+            <Route path="/users/:username" element={<ShowGithubUser />} />
+          </Route>
+
           <Route
             path="*"
             element={
