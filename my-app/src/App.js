@@ -101,15 +101,12 @@ export function App(props) {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/welcome" index element={<Welcome name="John" />} />
+          <Route path="/welcome" element={<Welcome name="John" />} />
           <Route
             path="/counter"
             element={<Counter count={5} interval={1000} amount={5} />}
           />
-          <Route path="/users" element={<GithubUserList />}>
-            <Route path="/users/:username" element={<ShowGithubUser />} />
-          </Route>
-
+          <Route path="/users/:username" element={<ShowGithubUser />} />
           <Route
             path="*"
             element={
@@ -123,7 +120,7 @@ export function App(props) {
           />
         </Routes>
         <h3>
-          <Link to="welcome">Welcome</Link>
+          <Link to="welcome">Home</Link>
         </h3>
 
         <h3>
