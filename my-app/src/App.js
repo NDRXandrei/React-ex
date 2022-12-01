@@ -111,7 +111,7 @@ export function App(props) {
             <Route index element={<p>Add a user and select it</p>} />
             <Route path="/users/:username" element={<ShowGithubUser />} />
           </Route>
-          <Route path="/github" element={<GithubUser user='NDRXandrei'/>} />
+          <Route path="/github" element={<GithubUser user={null}/>} />
 
           <Route
             path="*"

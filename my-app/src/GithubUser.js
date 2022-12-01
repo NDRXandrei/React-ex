@@ -45,8 +45,8 @@ export function GithubUser(props) {
   // const fetch = useGithubUser();
   // const user = fetch(props.user);
 
-  const { data, error } = useSWR(
-    `https://api.github.com/users/${props.user}`,
+  const { data, error } = useSWR( props.user !== null ?
+    `https://api.github.com/users/${props.user}` : <h1>Non trovato</h1>,
     fetcher
   );
 
