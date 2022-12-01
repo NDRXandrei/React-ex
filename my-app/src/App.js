@@ -111,6 +111,7 @@ export function App(props) {
             <Route index element={<p>Add a user and select it</p>} />
             <Route path="/users/:username" element={<ShowGithubUser />} />
           </Route>
+          <Route path="/github" element={<GithubUser user='NDRXandrei'/>} />
 
           <Route
             path="*"
@@ -133,6 +134,9 @@ export function App(props) {
         </h3>
         <h3>
           <Link to="users/:username">User</Link>
+        </h3>
+        <h3>
+          <Link to="github">Github</Link>
         </h3>
       </BrowserRouter>
     </>
